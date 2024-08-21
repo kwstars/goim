@@ -1,0 +1,8 @@
+[submodule "goim"]
+path = goim
+url = https://github.com/Terry-Mao/goim.git
+tag = v2.0.0
+[submodule "discovery"]
+path = discovery
+url = https://github.com/bilibili/discovery.git
+tag = v1.2.0

@@ -1,0 +1,60 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug comet",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/goim/cmd/comet",
+      "env": {},
+      "args": [
+        "-conf=target/comet.toml",
+        "-region=sh",
+        "-zone=sh001",
+        "-deploy.env=dev",
+        "-weight=10",
+        "-addrs=127.0.0.1",
+        "-debug=true"
+      ],
+      "showLog": true,
+      "cwd": "${workspaceFolder}/goim/",
+      "preLaunchTask": "build comet",
+    },
+    {
+      "name": "Debug job",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/goim/cmd/job",
+      "env": {},
+      "args": [
+        "-conf=target/job.toml",
+        "-region=sh",
+        "-zone=sh001",
+        "-deploy.env=dev"
+      ],
+      "showLog": true,
+      "cwd": "${workspaceFolder}/goim/",
+      "preLaunchTask": "build job"
+    },
+    {
+      "name": "Debug logic",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/goim/cmd/logic",
+      "env": {},
+      "args": [
+        "-conf=target/logic.toml",
+        "-region=sh",
+        "-zone=sh001",
+        "-deploy.env=dev",
+        "-weight=10"
+      ],
+      "showLog": true,
+      "cwd": "${workspaceFolder}/goim/",
+      "preLaunchTask": "build logic"
+    }
+  ]
+}
